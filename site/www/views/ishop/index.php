@@ -10,8 +10,9 @@ defined('DOSTUP') or die('Access denied');
 <script src="<?=TEMPLATE?>js/highcharts.js"></script><!--подключение библиотеки графика-->
 <script src="<?=TEMPLATE?>js/mychart.js"></script><!--подключение самого графика-->
 
-<script src="<?=TEMPLATE?>scrip.js"></script>
+
 <script src="<?=TEMPLATE?>script.js"></script>
+<script src="<?=TEMPLATE?>scrip.js"></script>
 </head>
 <body>
 <?

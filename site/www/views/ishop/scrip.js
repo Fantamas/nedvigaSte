@@ -25,25 +25,7 @@ $(document).ready(function () {
 		$('#' + id).toggle();
 	});
 	
-	$.ajax({
-				type: "POST",	// Тип запроса
-				url: "quert.php",	// Путь к сценарию, обработающему запрос
-				dataType: "json",	// Тип данных, в которых сервер должен прислать ответ
-				data: "query="+ query,	// Строка POST-запроса
-				error: function () {	// Обработчик, который будет запущен в случае неудачного запроса
-					alert( "При выполнении запроса произошла ошибка :(" );	// Сообщение о неудачном запросе
-				},
-				success: function ( data ) {
-					 
-					for ( var i = 0; i < data.length; i++ ) {
-						// Каждое полученное значение вставим в список видов транспорта
-						$( '#kind' ).append( '<option value="' + data[i].kind_id + '">' + data[i].kind + '</option>' );
-					}
-					// После того, как мы сформировали список, мы можем сделать его активным
-					// обратившись к его свойству disabled
-					$( '#kind' ).prop( 'disabled', false );	// Включаем поле
-				}
-			});
+	
 	
 });
 /*$(document).ready(function () {
@@ -74,3 +56,8 @@ function deleteCookie(name) {
     date.setTime(date.getTime() - 1);
     document.cookie = name + "=; expires=" + date.toGMTString();
 }
+
+
+
+
+	

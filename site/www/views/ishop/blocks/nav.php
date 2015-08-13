@@ -7,7 +7,7 @@
 <!--<a href="?view=sea">Второй поиск </a>-->
 <a href="">Статистика</a>
 <a href="">FAQ</a>
-<a href="">Идеи</a><br>
+<a href="">Идеи</a>
 <ul style="float:right;">
         	<? if(isset($_SESSION[user_id])){
 				echo '<li style="display:inline-block;"><a href="?exit=true">выход</a></li>';}else{
