@@ -1,11 +1,31 @@
+<div id="center">
+
+
 <div class="jobs-primary-heading jobs-heading-internal">
 <h1 class="jobs__header" >Поиск</h1>
 </div>
 <? 
-require_once TEMPLATE.'blocks/form.php';?>
+
+require_once TEMPLATE.'blocks/bar.php';?>
+
+<div id="form">
+<?
+switch ($para){
+	case 'a':require_once TEMPLATE.'form/form1.php'; 
+	break;
+	case 'p':require_once TEMPLATE.'form/form2.php'; 
+	break;
+	case 'k': echo '<h2>находится на этапе разработки</h2>'; 
+	break;
+	case 'o':echo '<h2>находится на этапе разработки</h2>'; 
+	break;
+}
+?>
+</div>  <!--#FORM RESULTS ENDS-->
+<!--<div class="clear"></div>-->
 
 <br><br>
-
+<div class="clear"></div>
 <div id="search_results"><!--SEARCH RESULTS STARTS-->
 
 
@@ -36,4 +56,4 @@ require_once TEMPLATE.'blocks/form.php';?>
 </div><!--SEARCH RESULTS ENDS-->
 
 
-
+</div>

@@ -1,6 +1,6 @@
 ﻿<script src="<?=TEMPLATE?>funcs.js"></script>
 <script src="<?=TEMPLATE?>script.js"></script>
-
+<div id="center">
 <div class="jobs-primary-heading jobs-heading-internal">
 <h1 class="jobs__header" >Поиск</h1>
 </div>
@@ -21,4 +21,4 @@
        
 <? endforeach;?>  
 
-</div><!--SEARCH RESULTS ENDS-->
+</div><!--SEARCH RESULTS ENDS--></div>

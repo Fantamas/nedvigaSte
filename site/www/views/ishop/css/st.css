@@ -1,0 +1,340 @@
+
+
+* {
+    margin: 0;
+    outline: 0 none;
+    padding: 0;
+}
+body, html {
+    height: 100%;
+}
+body {
+    background: #fff url("images/body1.png") repeat-y scroll center 0;
+    color: #314b7b;
+    font-family: "Open Sans",arial,sans-serif;
+    font-size: 22px;
+    line-height: 30px;
+    min-width: 980px;
+}
+a {
+    color: #0252aa;
+    cursor: pointer;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+a img {
+    border: 0 none;
+}
+em {
+    font-style: normal;
+}
+input, textarea, select {
+    font-family: "Open Sans",arial,sans-serif;
+    font-size: 18px;
+}
+textarea {
+    overflow: auto;
+}
+select {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+    font-family: "Open Sans";
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0 5px 0 4px;
+    width: 367px;
+}
+.cl {
+    clear: both;
+    display: block;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    text-indent: -4000px;
+}
+.notext {
+    font-size: 0;
+    line-height: 0;
+    text-indent: -4000px;
+}
+.left, .alignleft {
+    display: inline;
+    float: left;
+}
+.right, .alignright {
+    display: inline;
+    float: right;
+}
+h2 {
+    color: #314b7b;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+}
+h2 span {
+    display: block;
+    font-size: 36px;
+    padding-bottom: 2px;
+}
+.shell {
+    margin: 0 auto;
+    width: 960px;
+}
+#logo {
+    font-size: 0;
+    line-height: 0;
+    margin: 0 auto;
+    padding-bottom: 14px;
+    width: 289px;
+}
+#logo a {
+    background: rgba(0, 0, 0, 0) url("images/logo4.png") no-repeat scroll 0 0;
+    display: block;
+    height: 62px;
+    text-indent: -4000px;
+    width: 289px;
+}
+#sidebar {
+    display: inline;
+    float: left;
+    padding-top: 32px;
+    width: 503px;
+}
+#sidebar h2 {
+    margin: 30px auto 0;
+    width: 380px;
+}
+#content {
+    display: inline;
+    float: right;
+    padding: 27px 13px 0 11px;
+    width: 415px;
+}
+#content h2 {
+    color: #010101;
+    letter-spacing: -1px;
+    padding-right: 6px;
+    text-shadow: 0 1px #fff;
+}
+#content h2.pull-up {
+    margin-top: -6px;
+    padding-bottom: 17px;
+    position: relative;
+}
+#content p.intro-text {
+    margin: 0 auto;
+    padding: 0 0 9px 24px;
+    text-align: center;
+    width: 372px;
+}
+#content p.inspired {
+    color: #8f8f8f;
+    font-size: 15px;
+    text-align: center;
+    text-shadow: 1px 2px 1px #f6f6f6;
+}
+#content p.inspired a {
+    color: #8f8f8f;
+    text-decoration: underline;
+}
+#content p.inspired a:hover {
+    text-decoration: none;
+}
+.steps {
+    padding-bottom: 29px;
+}
+.steps p {
+    color: #010101;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 0 0 0 40px;
+    text-align: left;
+    width: auto;
+}
+.steps form label {
+    display: block;
+    padding-bottom: 23px;
+}
+.steps form p a {
+    color: #015978;
+    text-decoration: underline;
+}
+.steps form p a:hover {
+    text-decoration: none;
+}
+.steps form .select-holder {
+    background: #fff none repeat scroll 0 0;
+    margin-top: 7px;
+    padding: 13px 19px 20px 13px;
+}
+.steps .select-wrap {
+    border: 1px solid #707070;
+    margin-left: 1px;
+    padding: 2px 0 4px;
+    width: 375px;
+}
+.steps .submit-button {
+    background: rgba(0, 0, 0, 0) url("images/submit-button.png") no-repeat scroll 0 0;
+    border: 0 none;
+    display: block;
+    height: 73px;
+    margin: 16px auto 0;
+    width: 346px;
+}
+.steps .submit-button {
+    color: #212121;
+    cursor: pointer;
+    font-family: "Open Sans Bold";
+    font-size: 30px;
+    letter-spacing: -1px;
+    text-shadow: 0 1px #faf562;
+}
+.steps .submit-button:hover {
+    background-position: 0 -73px;
+}
+.steps .send {
+    background: rgba(0, 0, 0, 0) url("images/send.png") no-repeat scroll 0 0;
+    border: 0 none;
+    display: block;
+    height: 73px;
+    margin: 16px auto 0;
+    width: 346px;
+}
+.steps .send {
+    color: #212121;
+    cursor: pointer;
+    font-family: "Open Sans Bold";
+    font-size: 30px;
+    letter-spacing: -1px;
+    text-shadow: 0 1px #faf562;
+}
+.steps .send:hover {
+    background-position: 0 -73px;
+}
+.steps .field {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #d7d7d7;
+    box-shadow: 3px 5px 3px 3px #f5f5f5 inset;
+    line-height: 28px;
+    margin: 25px 0 17px 6px;
+    padding: 10px 20px 11px;
+    width: 366px;
+}
+.step-2 {
+    display: none;
+}
+.contest-ends {
+    padding-top: 16px;
+}
+.contest-ends p {
+    color: #8f8f8f;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    text-shadow: 0 1px #fff;
+}
+.contest-ends p span {
+    display: block;
+    font-size: 15px;
+    line-height: 18px;
+}
+body.type-2 {
+    background: #e1e1e1 url("body2.png") repeat-x scroll 0 0;
+}
+body.type-2 #wrapper {
+    background: rgba(0, 0, 0, 0) url("images/wrapper.jpg") no-repeat scroll center 0;
+}
+body.type-2 #logo {
+    width: 365px;
+}
+body.type-2 #logo a {
+    background: rgba(0, 0, 0, 0) url("logo2.png") no-repeat scroll 0 0;
+    height: 62px;
+    width: 365px;
+}
+body.type-2 .steps p {
+    color: #fff;
+}
+body.type-2 #sidebar h2 {
+    color: #2e0035;
+    margin-top: 10px;
+    width: auto;
+}
+body.type-2 #content p.intro-text {
+    color: #2e0035;
+    font-family: "MuseoSlab-500";
+    font-size: 24px;
+    line-height: 30px;
+    padding: 2px 0 16px;
+    width: auto;
+}
+body.type-2 .select-holder {
+    margin-left: 2px;
+}
+body.type-2 .select-holder label {
+    padding-bottom: 13px;
+}
+body.type-2 .submit-button {
+    margin-top: 23px;
+}
+body.type-3 {
+    background: #fff url("body3.png") repeat-y scroll center 0;
+}
+body.type-3 .shell {
+    width: 874px;
+}
+body.type-3 #logo {
+    padding-bottom: 19px;
+}
+body.type-3 #sidebar {
+    padding-top: 29px;
+    width: 354px;
+}
+body.type-3 #sidebar h2 {
+    margin-top: 9px;
+    padding: 0 0 42px;
+    width: 280px;
+}
+body.type-3 #content {
+    width: 495px;
+}
+body.type-3 #content h2.pull-up {
+    padding-bottom: 22px;
+}
+body.type-3 #content p.intro-text {
+    padding: 0 0 27px 10px;
+    width: 433px;
+}
+body.type-3 .steps p {
+    letter-spacing: 1px;
+}
+body.type-3 .select-holder {
+    margin: 16px 30px 0 35px;
+    padding: 13px 19px 20px 18px;
+}
+body.type-3 .submit-button {
+    margin-top: 29px;
+}
+body.type-3 .contest-ends {
+    padding-top: 12px;
+}
+body.type-3 .field {
+    margin: 20px 0 17px 47px;
+}
+body.type-3 #sidebar p {
+    color: #666666;
+    font-size: 12px;
+    line-height: 18px;
+    padding-left: 14px;
+    padding-right: 14px;
+    text-align: center;
+}
+body.type-3 #sidebar p a {
+    color: #666;
+    text-decoration: underline;
+}
+body.type-3 #sidebar p a:hover {
+    text-decoration: none;
+}

@@ -2,134 +2,491 @@ body{
 	margin:0;
 	padding:0;
 }
-body, input, textarea, select, button, .normal {
+
+body,textarea, select, button, .normal {
     color: #3d464d;
     font-family: "Open Sans","lucida grande","Segoe UI",arial,verdana,"lucida sans unicode",tahoma,sans-serif;
     font-size: 18px;
     font-weight: normal;
 }
 
+/*==============header starts=============================*/
+#header{
+	width:100%;
+	height:40px;
+	border-bottom:solid 1px #E7E7E7;
+	margin-bottom:30px;
+}
+
+#header nav{
+	width:84%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:20px;
+	font-size:16px;
+}
+#header a:link{color:#2895F1;text-decoration: none;}
+#header a:visited{color:#2895F1;text-decoration: none;}
+#header a:hover{color:#007EE5;text-decoration: none;}
+#header a:active{color:#007EE5;text-decoration: none;}
+/*==============HEADER ENDS=============================*/
+
+
+/*  ==============блок для форм=============================  */
+/*vhod*/
+#vhod{
+	height:300px;
+	width:45%;
+	margin:150px auto 30px auto;
+	background-color:#F6F9FC;
+	font: 18px;	
+	border-top:2px solid #F00;
+	border-bottom:2px solid #F00;
+}
+
 #form{
-font: 18px;	
+	width:70%;
+	/*border:2px solid #7B8994;*/
+	float:left;
+	background-color:#F6F9FC;
+	font: 18px;	
+	border-bottom:2px solid #F00;
+	margin-bottom:30px;
+}
+input {
+	width: 100px;
+	font-size: 13px;
+	padding: 6px 0 4px 10px;
+	border: 1px solid #cecece;
+	background: #F6F6f6;
+	border-radius: 5px;
+}
+/* Form */
+.customForm {
+	color: #444444;
+	width: 320px;
+	margin: 2em auto;
+	font: 13px/1.8 Helvetica;
+}
+.customForm input, .customForm textarea {
+	font: 13px Helvetica;
 }
 
-#button{
-	width:100px;
-	height:35px;
+/* = Input */
+.customForm input {
+	width: 200px;
+	font-size: 13px;
+	padding: 6px 0 4px 10px;
+	border: 1px solid #cecece;
+	background: #F6F6f6;
+	border-radius: 5px;
+}
+.customForm textarea {
+	display: block;
+	/* = Убираем скролл */
+	overflow: auto;
+	
+	/* = Убираем увеличение */
+	resize: none;
+	width: 300px;
+	height: 50px;
+	
+	/* = Добавим фон, рамку, отступ */
+	background: #f6f6f6;
+	border: 1px solid #cecece;
+	border-radius: 5px 0 0 0;
+	padding: 8px 0 8px 10px;
+}
+/* = Переключатели Radio Button */
+.radio {
+	display: block;
+	height: 25px;
+	background-position: 0 -56px;
+	coloR: #444;
+	cursor: pointer;
+	text-indent: 22px;
+	font-size: 13px;
+}
+.radio.active {
+	background-position: 0 -86px;
+}
+.radio.error {
+	border-color: #ff0000;
 }
 
-.c{
-	width:100px;
-	height:30px;
-font-size: 18px;
+/*	=	CheckBox */
+/* Стилизируем чекбокс, точнее скрываем его */
+.check input[type=checkbox] {
+	position: absolute;
+	left: -10000px;
+}
+.check {
+	background-position: 0 3px;
+	padding-left: 25px;
+	cursor: pointer;
+	position: relative;
+}
+.check.active {
+	background-position: 0 -27px;
 }
 
-.col{color:#FFF;}
+/*	=	Select */
+.slct {
+	display: block;
+	border-radius: 5px;
+	border: 1px solid #cecece;
+	background-color: #F6F6f6;
+	width: 185px;
+	padding: 4px 15px 4px 10px;
+	color: #444;
+	background-position: 290px -145px;
+	
+	/*
+		Супер финт обрезаем текст
+		чтобы не вылезал за рамку
+	*/
+	overflow: hidden;
+	white-space:nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;	
+	
+}
+.slct.active {
+	border-radius: 5px 5px 0 0;
+	border-bottom: none;
+}
+.drop {
+	margin: 0;
+	padding: 0;
+	width: 205px;
+	border: 1px solid #cecece;
+	border-top: none;
+	display: none;
+	position: absolute;
+	background: #fff;
+}
+.drop li {
+	list-style: none;
+	border-top: 1px dotted #e8e8e8;
+	cursor: pointer;
+	display: block;
+	color: #444;
+	padding: 4px 15px 4px 25px;
+	background-position: 10px -119px;
+}
+.drop li:hover {
+	background-color: #e8e8e8;
+	color: #222;
+}
+
+/*	=	File Load */
+/* Стили для контейнера */
+.file-load-block {
+	width: 310px;
+	height: 35px;
+	overflow: hidden;
+	position: relative;
+}
+/* работаем с инпутом который конкретно file */
+.file-load-block input[type=file] {
+	/* делаем кроссбраузерную прозрачность */
+	opacity: 0;
+	filter: alpha(opacity=0);
+	
+	/* Позиционируем абсолютно отсносительно контейнера по правому краю */
+	position: absolute;
+	top: 0;
+	right: 0;
+	
+	/* 
+	Задаем высоту и делаем шрифт огромным 
+	для того чтобы кнопка "обзор" занимала все пространство контейнера
+	*/
+	height: 35px;
+	font-size: 600px;
+	
+	/* Ставим наш инпут поверх всего содержимого */
+	z-index: 2;
+	cursor: pointer;
+	width: auto;
+}
+/* Стилизируем инпут и кнопку которые под загрузчиком */
+.file-load-block input[type=text] {
+	z-index: 1;
+	width: 190px;
+	padding-right: 10px;
+	white-space:nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;	
+}
+.file-load-block button {
+	position: absolute;
+	right: 0;
+	top: 2px;
+	width: 90px;
+	height: 28px;
+	border: 1px solid #ccc;
+	background: #fff;
+	color: #666;
+	border-radius: 5px;
+	box-shadow: inset 0 2px 2px #ccc; 
+}
+.file-load-block .button-hover {
+	box-shadow: 0 0 2px #ccc;
+}
+
+/*	=	Reset Form */
+.reset-form button {
+	width: 90px;
+	height: 28px;
+	border: 1px solid #ccc;
+	background: #fff;
+	color: #666;
+	border-radius: 5px;
+	box-shadow: inset 0 2px 2px #ccc;
+	cursor: pointer;
+}
+.reset-form button:hover {
+	box-shadow: 0 0 2px #ccc;
+}
+.reset-form button:active {
+	margin-top: 1px;
+	margin-bottom: -1px;
+	zoom: 1;
+}
+
+/*	=	Form Send */
+.sendmail button {
+	width: 90px;
+	height: 28px;
+	border: 1px solid #ccc;
+	background: #fff;
+	color: #666;
+	border-radius: 5px;
+	box-shadow: inset 0 2px 2px #ccc;
+	cursor: pointer;
+}
+.sendmail button:hover {
+	box-shadow: 0 0 2px #ccc;
+}
+.sendmail button:active {
+	margin-top: 1px;
+	margin-bottom: -1px;
+	zoom: 1;
+}
+
+button {
+	width: 90px;
+	height: 28px;
+	border: 1px solid #ccc;
+	background: #fff;
+	color: #666;
+	border-radius: 5px;
+	box-shadow: inset 0 2px 2px #ccc;
+	cursor: pointer;
+}
+ button:hover {
+	box-shadow: 0 0 2px #ccc;
+}
+ button:active {
+	margin-top: 1px;
+	margin-bottom: -1px;
+	zoom: 1;
+}
+
+#piece{
+	margin: 7px 2px 7px 2 px;
+}
+/*  ==============конец блока для форм======================  */
+
+
+
+
+
+
+
+/* ==============#TABS STARTS====================== */
+
+#raz { /* корпус */ 
+  position: relative;
+  height: 800px;
+  border-top: 30px solid #F6F9FC;
+  width:100%;
+}
+#raz > div { /* вкладка */ 
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  visibility: collapse;
+  transition: 0s 9999999s;
+  box-sizing: border-box;
+/*  background: #fff;*/
+  padding: 5px;
+}
+#raz > div:before { /* рамка вкладки */ 
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: #808080 solid 1px;
+  border-top: none;
+}
+#raz > div:hover, #raz > div:nth-of-type(1) {
+  visibility: visible;
+  transition: 0s;
+}
+#raz:hover > div:not(:hover) {
+  visibility: hidden;
+  transition: 0s;
+}
+#raz > div > span { /* кнопка */ 
+  position: absolute;
+  top: -30px;
+  line-height: 30px;
+  height: 30px;
+  width: 25%; /* 4 вкладки, а значит 100/4 */ 
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px solid rgb(128,128,128);
+  border-left-color: rgba(0,0,0,0);
+  visibility: visible;
+  transition: 0s 9999999s;
+  cursor: pointer;
+}
+#raz > div:nth-of-type(1) > span {left: 0; border-left-color: rgb(128,128,128);}
+#raz > div:nth-of-type(2) > span {left: 25%;}
+#raz > div:nth-of-type(3) > span {left: 50%;}
+#raz > div:nth-of-type(4) > span {left: 75%;}
+#raz > div:hover > span, #raz > div:nth-of-type(1) > span {
+  border-bottom-color: rgba(0,0,0,0);
+  transition:  0s;
+}
+#raz:hover > div:not(:hover) > span {
+  border-bottom-color: rgba(128,128,128,.99);
+  transition:  0s;
+}
+#raz > div:not(:nth-of-type(1)):not(:hover):after { /* появляется нижняя граница у первой кнопки */ 
+  content: "";
+  left: 0;
+  position: absolute;
+  top: -1px;
+  width: 25%;
+  border-top: 1px solid rgb(128,128,128);
+}
+
+/* ==============#TABS ENDS====================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==============#BAR STARTS====================== */
 
 #bar{
-	height:100%;
-	width:300px;
+	margin-top:23px;
+	/*height:100%;*/
+	width:26%;
 	/*position:fixed;
 	background-color:#fff;*/
-	float:left;
+	float:right;
+	border:2px solid #F6F9FC;
 }
-#bar a:link{color:#FFF;}
-#bar a:hover{color:#FFF;}
-#bar a:active{color:#FFF;}
+
+#bar a:link{color:#999;}
+#bar a:hover{color:#999;}
+#bar a:active{color:#F00;}
 #bar a:visiter{color:#FFF;}
+
+
 #bar .col{
 	height:40px;
-	background-color:#036;
-	}
-#stories_from{
-	width:100px;
-	height:30px;
-	font-size:18px;
+	background-color:#F6F9FC;
 }
 
-#stories_to{
-	width:100px;
-	height:30px;
-font-size: 18px;
+#bar.col a:link{color:#999;}
+#bar.col a:hover{color:#999;}
+#bar.col a:active{color:#999;}
+#bar.col a:visiter{color:#999 ;}
+
+
+#bar.col.pod a:link{color:#7b8994;}
+#bar.col.pod a:hover{color:#7b8994;}
+#bar.col.pod a:active{color:#C30;}
+#bar.col.pod a:visiter{color:#7b8994;}
+
+
+
+/* ==============#BAR ENDS====================== */
+
+/* ==============#BARR STARTS====================== */
+
+#barr{
+	margin-top:23px;
+	/*height:100%;*/
+	width:26%;
+	/*position:fixed;
+	background-color:#fff;*/
+	float:right;
+	border:2px solid #F6F9FC;
 }
 
-#storied_from{
-	width:100px;
-	height:30px;
-font-size: 18px;
-}
-#storied_to{
-	width:100px;
-	height:30px;
-font-size: 18px;
-}
+#barr a:link{color:#999;}
+#barr a:hover{color:#999;}
+#barr a:active{color:#F00;}
+#barr a:visiter{color:#FFF;}
 
 
-
-
-#year_from{
-	width:100px;
-	height:30px;
-font-size: 18px;
-}
-#year_to{
-	width:100px;
-	height:30px;
-font-size: 18px;
+#barr .col{
+	height:40px;
+	background-color:#F6F9FC;
 }
 
+#barr.col a:link{color:#999;}
+#barr.col a:hover{color:#999;}
+#barr.col a:active{color:#999;}
+#barr.col a:visiter{color:#999 ;}
+
+
+#barr.col.pod a:link{color:#7b8994;}
+#barr.col.pod a:hover{color:#7b8994;}
+#barr.col.pod a:active{color:#C30;}
+#barr.col.pod a:visiter{color:#7b8994;}
+
+
+
+/* ==============#BAR ENDS====================== */
 
 
 
 
 
-
-
-
-
-
-
-select{
-	width:auto;
-	height:30px;
-font-size: 18px;	
-}
-
-.radio_buttons {
-    margin: 20px;
-    font: 18px Tahoma;
-}
-.radio_buttons div {
-    float: left;
-}
-.radio_buttons input {
-    position: absolute;
-    left: -9999px;
-}
-.radio_buttons label {
-    display: block;
-    margin: 0 0 0 -1px;
-    padding: 8px 10px;
-    border: 1px solid #BBBBBB;
-    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .12);
-    cursor: pointer;
-}
-.radio_buttons input:checked + label {
-    background: white;
-    box-shadow: inset 0 3px 6px rgba(0, 0, 0, .2);
-}
-.radio_buttons div:first-child label {
-    margin-left: 0;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-}
-.radio_buttons div:last-child label {
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-}
-
-/////
 
 .jobs-primary-heading .jobs__header {
     color: #7b8994;
@@ -151,147 +508,13 @@ font-size: 18px;
     margin-right: auto;
     margin-top: 20px;
     text-align: center;
+	border-bottom:2px solid #ccc;
 }
 .multiple{
 	display:inline-block;
 }
-#header{
-	width:100%;
-	height:40px;
-	border-bottom:solid 1px #E7E7E7;
-	margin-bottom:30px;
-	background-color:#fff;
-}
-#header nav{
-	width:84%;
-	margin-left:auto;
-	margin-right:auto;
-	margin-top:20px;
-	font-size:16px;
 	
-}
-#header a:link{color:#2895F1;text-decoration: none;}
-#header a:visited{color:#2895F1;text-decoration: none;}
-#header a:hover{color:#007EE5;text-decoration: none;}
-#header a:active{color:#007EE5;text-decoration: none;}
 
-#form{
-	width:100%;
-	border:2px solid #7B8994;
-	
-}
-
-#telo{
-float:right;
-width:450px;
-/*background-color:#69F;*/
-}
-
-
-
-#footer{
-	width:100%;
-	height:300px;
-	background-color:#F6F9FC;
-	margin-top:30px;
-}
-
-#footer nav ul {
-    float: left;
-    list-style-image: none;
-    list-style-position: outside;
-    list-style-type: none;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    width: 165px;
-}
-
-#footer nav li:first-child {
-    font-size: 14px;
-    font-weight: bolder;
-    line-height: 24px;
-}
-#homepage-footer nav li {
-    color: #7b8994;
-   
-    margin-bottom: 11px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-#footer {
-    -moz-border-bottom-colors: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    border-bottom-color: -moz-use-text-color;
-    border-bottom-style: none;
-    border-bottom-width: medium;
-    border-image-outset: 0 0 0 0;
-    border-image-repeat: stretch stretch;
-    border-image-slice: 100% 100% 100% 100%;
-    border-image-source: none;
-    border-image-width: 1 1 1 1;
-    border-left-color: -moz-use-text-color;
-    border-left-style: none;
-    border-left-width: medium;
-    border-right-color: -moz-use-text-color;
-    border-right-style: none;
-    border-right-width: medium;
-    border-top-color: -moz-use-text-color;
-    border-top-style: none;
-    border-top-width: medium;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    width: auto;
-}
-#footer nav ul {
-    float: left;
-    list-style-image: none;
-    list-style-position: outside;
-    list-style-type: none;
-    margin-bottom: 0;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    width: 165px;
-}
-#footer nav li {
-    color: #7b8994;
-    line-height: 16px;
-    margin-bottom: 11px;
-}
-#footer nav li:first-child {
-    font-size: 14px;
-    font-weight: bolder;
-    line-height: 24px;
-}
-#footer nav a {
-    color: #7b8994;
-}
-
-
-
-
-input{
-	width:50px;
-	height:20px;
-	border:1px solid #7F8C9C;
-	
-}
 
 
 a img {
@@ -303,57 +526,29 @@ border:none;
 }
 
 #center{	
-width:75%;
+width:80%;
+min-height:450px;
 margin-left:auto;
 margin-right:auto;
-float:left;
+/*float:left;*/
+/*border:2px solid #F00;*/
 }
 
-
-#bigblock{
-	/*width:1220px;*/
-	min-height:550px;
-	
-	margin: 0 auto;
-	border:2px solid #000;
-}
-
-#filters{
-	width:100%;
-	min-height:50px;
-	background-color:#F00;
-	
-	
-}
-
-#list{
-	width:280px;
-	min-height:400px;
-	background-color:#FFF;
-	float:right;
-	
-	padding:7px;
-	padding:10px;
-}
-
-#contentt{
-	width:455px;
-	min-height:500px;
-	background-color:#FF6;
-	opacity:0.5;
-	float:right;
-	
-	
-}
-
+/* ==============#ITEM STARTS====================== */
 #item{
 	width:70%;
 	margin-bottom:15px;
 	min-height: 80px;
-	border:1px solid #E7E7E7;
+	border:2px solid #F6F9FC;
+	/*background-color:#F6F9FC;*/
+	float:left;
 }
 
-
+#telo{
+float:right;
+width:450px;
+/*background-color:#69F;*/
+}
 
 
 .btn-more {
@@ -423,3 +618,95 @@ float:left;
     text-decoration-line: none;
     text-decoration-style: solid;
 }
+/* ==============#ITEM ENDS====================== */
+
+
+
+
+
+/*FOOTER STRTS*/
+
+#footer{
+	width:100%;
+	height:300px;
+	background-color:#F6F9FC;
+	margin-top:30px;
+	padding-top:50px;
+}
+
+#footer {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: -moz-use-text-color;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: -moz-use-text-color;
+    border-left-style: none;
+    border-left-width: medium;
+    border-right-color: -moz-use-text-color;
+    border-right-style: none;
+    border-right-width: medium;
+    border-top-color: -moz-use-text-color;
+    border-top-style: none;
+    border-top-width: medium;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    /*padding-top: 0;*/
+    width: auto;
+}
+
+#footer nav{
+	width:84%;
+	height:230px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#footer nav ul {
+    float: left;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    width: 165px;
+}
+
+#footer nav ul {
+    float: left;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    width: 165px;
+}
+
+#footer nav ul li {
+    color: #7b8994;
+    line-height: 16px;
+    margin-bottom: 11px;
+}
+
+#footer nav li:first-child {
+    font-size: 14px;
+    font-weight: bolder;
+    line-height: 24px;
+}
+
+#footer nav a {
+    color: #7b8994;
+}
+/*FOOTER ENDS*/

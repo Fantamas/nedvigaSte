@@ -1,3 +1,4 @@
+<div id="center">
 <? 
 foreach($produc as $produ):
 print '<pre>';
@@ -8,13 +9,14 @@ endforeach;
 <? 
 foreach($producc as $prod):
 ?>
-<img src="<?=TEMPLATE.$prod['image_name']?>" width="100" height="100">
+<img src="<?=TEMPLATE.$prod['image_name	']?>" width="100" height="100">
 <?
 print '<pre>';
 print_r($prod);
 print '</pre>';
 endforeach;
 ?>
+</div>
 
 
 

@@ -1,5 +1,4 @@
-<div id="footer">
-<footer id="homepage-footer" class="">
+<footer id="footer">
 <nav>
 <ul>
 	<li>Компания</li>
@@ -10,10 +9,10 @@
 		<a href="/jobs">Вакансии</a>
 	</li>
 	<li>
-		<a href="/news">Для прессы</a>
+		<a href="#">Для прессы</a>
     </li>
     <li>
-    	<a href="https://blogs.dropbox.com/dropbox">Блог (на английском)</a>
+    	<a href="#">Блог (на английском)</a>
     </li>
 </ul>
 <ul>
@@ -22,13 +21,10 @@
 	    <a href="/help">Справочный центр</a>
     </li>
     <li>
-    	<a href="/gs">С чего начать</a>
+    	<a href="/gs">FAQ</a>
     </li>
     <li>
-    	<a href="/contact">Контактная информация</a>
-    </li>
-    <li>
-    	<a href="/privacy">Конфиденц. и условия</a>
+    	<a href="">Правила</a>
     </li>
 </ul>
 <ul>
@@ -37,34 +33,43 @@
 	    <a href="/developers">Разработчикам</a>
     </li>
     <li>
-    	<a href="/referrals">Пригласите друзей</a>
-    </li>
-    <li>
-    	<a href="https://www.dropboxforum.com">Форум</a>
+    	<a href="/referrals">Идеи для следующих релизов</a>
     </li>
 </ul>
 <ul>
     <li>Мы в соц сетях</li>
     <li>
-	    <a href="">Twitter</a>
+	    <a href="Vk"></a>
     </li>
     <li>
     	<a href="">Facebook</a>
     </li>
     <li>
-    	<a href="">Vk</a>
+    	<a href="">Twitter</a>
     </li>
     <li>
     	<a href="?view=contacts">Контакты</a>
     </li>
 </ul>
-    <ul>
+<ul>
     <li>Продукты</li>
     <li>
-    <a href="/pro">Расширенный</a>
+    <a href="/pro">Поиск</a>
     </li>
     <li>
-    <a href="/business">Бизнес</a>
+    <a href="/business">Аналитика</a>
+    </li>
+    <li>
+    <a href="#">Статистика</a>
+    </li>
+</ul>
+<ul>
+    <li>Грузоперевозки</li>
+    <li>
+    <a href="#">Компании</a>
+    </li>
+    <li>
+    <a href="#">Бизнес</a>
     </li>
     <li>
     <a href="http://www.mailboxapp.com">Mailbox</a>
@@ -74,6 +79,5 @@
     </li>
 </ul>
 </nav>
-
 </footer>
-</div>
+

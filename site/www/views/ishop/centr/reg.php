@@ -1,3 +1,5 @@
+<div id="center">
+<div id="form">
 <form  action="index.php" method="post">
 	<label> имя</label><input type="text" name="name"><br>
     <label>фамилия</label><input type="text" name="second_name" ><br>
@@ -8,3 +10,5 @@
     <input type="submit" value="Зарагестрироваться">
 </form>
 <h2>капчу бы...</h2>
+</div>
+</div>

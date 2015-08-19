@@ -35,7 +35,7 @@ require_once TEMPLATE.'blocks/bar.php';
 <? require_once TEMPLATE.'blocks/bar.php';
   include 'centr/'.$kview.'.php';?>
 </div><div class="clear"></div>
-<? require_once 'blocks/footer.php';?>
+<? require_once TEMPLATE.'blocks/footer.php';?>
 </body>
 </html>
 

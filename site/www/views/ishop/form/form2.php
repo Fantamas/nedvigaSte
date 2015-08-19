@@ -1,5 +1,5 @@
 <div id="dva">
-    <div id="mesto" style="background-color:#CCC">
+    <div id="mesto">
         <label for="area"></label>
             <select id="area" onchange="choiceCities()">
                 <option value="0">Область</option>
@@ -20,9 +20,15 @@
             </select>
         <label for="street">Улица</label>
         <input id="street" type="text" class="c">
+        
+        <label for="price_from">Цена</label>
+            <input type="text" id="price_from" placeholder="from" maxlength="10" class="c">
+            <input type="text" id="price_to" placeholder="to" class="c">
+        
     </div>
+    
     <div class="radio_buttons">
-        <div id='kolvokomnat' >
+        <div id='kolvokomnat'>
             <div>
                 <input type="checkbox" name="optio" id="rad1" checked />
                 <label for="rad1">1 комн </label>
@@ -46,28 +52,26 @@
         </div><!--kolvokomnat ends-->
     </div><!--radio_buttons ends-->
 	<br><br>
-    <label for="price_from">Цена</label>
-        <input type="text" id="price_from" placeholder="from" maxlength="10" class="c">
-        <input type="text" id="price_to" placeholder="to" class="c">
+    
 	<br><br>
     <label>Площадь общая </label>
         <input id="square_from" placeholder="from" class="c">
         <input id="square_to" placeholder="to" class="c">
-    <input type="button" id="button" value="фильтры">
-    <div id="first" style="border-bottom:solid 10px #FFFFFF; margin-bottom:20px;">
+    <input type="button" id="button" value="фильтры"><br>
+    <!--<div id="first" style="border-bottom:solid 10px #FFFFFF; margin-bottom:20px;">-->
         <label>Площадь жилая</label>
             <input id="living_from" placeholder="from" class="c">
-            <input id="living_to" placeholder="to" class="c">
+            <input id="living_to" placeholder="to" class="c"><br>
         <label>Год постройки</label>
             <input id="year_from" placeholder="from" class="c">
             <input id="year_to" placeholder="to" class="c">
             <br>
 		<label>Площадь кухни </label>
             <input id="kitchen_from" placeholder="from" class="c">
-            <input id="kitchen_to" placeholder="to" class="c">
+            <input id="kitchen_to" placeholder="to" class="c"><br>
         <label>Этажность</label>
             <input id="storied_from" placeholder="from" class="c">
-            <input id="storied_to" placeholder="to" class="c">
+            <input id="storied_to" placeholder="to" class="c"><br>
     	<label>Этаж</label>
             <input id="stories_from" placeholder="from" class="c">
             <input id="stories_to" placeholder="to" class="c">
@@ -112,7 +116,7 @@
                 <option value="3">Кирпичный</option>
                 <option value="4">Блочный</option>
                 <option value="5">Каркасный</option>
-            </select>
+            </select><br>
         <label for="metro"></label>
             <select id="metro">
                 <option value="0">Метро</option>
@@ -139,5 +143,5 @@
     		<br>
     	<label class="custom" for="internet">интернет</label>
     		<input id="internet" type="checkbox">
-    </div><!--end first-->  
+   <!-- </div>--><!--end first-->  
 </div>

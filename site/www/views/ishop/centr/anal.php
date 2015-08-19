@@ -1,13 +1,34 @@
-<script src="<?=TEMPLATE?>script.js"></script>
+<div id="center">
+
 
 <div class="jobs-primary-heading jobs-heading-internal">
-<h1 class="jobs__header" >Поиск</h1>
+<h1 class="jobs__header" >Анализ</h1>
 </div>
-<? require_once TEMPLATE.'blocks/form.php';?>
+<? 
+
+require_once TEMPLATE.'blocks/barr.php';?>
+
+<div id="form">
+<?
+/*switch ($para){
+	case 'a':require_once TEMPLATE.'form/form1.php'; 
+	break;
+	case 'p':require_once TEMPLATE.'form/form2.php'; 
+	break;
+	case 'k': echo '<h2>находится на этапе разработки</h2>'; 
+	break;
+	case 'o':echo '<h2>находится на этапе разработки</h2>'; 
+	break;
+}*/
+?>
+</div>  <!--#FORM RESULTS ENDS-->
+<!--<div class="clear"></div>-->
 
 <br><br>
-
+<div class="clear"></div>
 <div id="search_results"><!--SEARCH RESULTS STARTS-->
+
+
 
 <? foreach($products as $product):?>
 <div id="item">
@@ -28,33 +49,11 @@
 <a href="?view=show&idt=<?=$product['id']?>" class="btn-more" style="float:right">Подробнее</a>
 </div><!-- edn #telo-->
 <div class="clear"></div>
-</div>
+</div><!--tem edns-->
        
 <? endforeach;?>  
 
 </div><!--SEARCH RESULTS ENDS-->
 
 
-
-
-
-
-
-
-    
-    
-        
-
-    
-	
-        
-
-
-
-    <?
-
-//echo count (parse());
-?>
-    
-
-
+</div>

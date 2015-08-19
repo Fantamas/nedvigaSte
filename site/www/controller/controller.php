@@ -94,9 +94,10 @@ switch($view){
 		$products=products($cat);
 		break;
 	case('show'):
-		//$id=abs((int)$_GET['id']);
-		//$produc=showproduct($id);
-		//$producc=show($idt);
+		$idt=abs((int)$_GET['idt']);
+		$produc=showproduct($idt);
+		$uid=$produc[0][user_id];
+		$producc=show($uid);
 		break;
 }
 		

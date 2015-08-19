@@ -36,14 +36,14 @@ function products(){
 
 //    переменную для таблиц которые нужно выводить
 
-/*function showproduct($idt){
+function showproduct($idt){
 	$query="SELECT * FROM flats WHERE id =$idt";
 	$res=mysql_query($query) or die(mysql_query());
 	$produc=array();
 	$row=mysql_fetch_assoc($res);
 	$produc[]=$row;
 	
-	$uid=$row[user_id_fk] or die(сука);//получение из массива id для получения массива загрузок
+	//$uid=$row[user_id] or die(сука);//получение из массива id для получения массива загрузок
 		
 	function show($uid){
 		$q = "SELECT * FROM  user_uploads WHERE user_id_fk = $uid";
@@ -55,7 +55,9 @@ function products(){
 		return $producc;
 	}
 	return $produc;
-}*/
+}
+
+
 function fun(){
 	
 
